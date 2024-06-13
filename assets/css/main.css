@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gradient-to-b bg-fixed antialiased;
+  @apply from-white to-slate-100 text-slate-900/80;
+  @apply dark:from-slate-800 dark:to-slate-900 dark:text-white/80;
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-4xl px-8;
+  }
+
+  .heading-xl,
+  .heading-lg {
+    @apply font-medium text-slate-900;
+    @apply dark:text-white;
+  }
+
+  .heading-xl {
+    @apply text-xl;
+  }
+
+  .heading-lg {
+    @apply text-lg;
+  }
+
+  .highlight {
+    @apply font-medium text-slate-900;
+    @apply dark:text-white;
+  }
+
+  .link {
+    @apply transition-colors;
+    @apply hover:text-slate-900;
+    @apply dark:hover:text-white;
+  }
+
+  .tag {
+    @apply w-fit rounded-full bg-slate-900/10 px-3 text-xs font-medium leading-6;
+    @apply dark:bg-white/20;
+  }
+}
