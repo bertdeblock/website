@@ -173,7 +173,7 @@ const yearsOfExperience = new Date().getFullYear() - 2012;
     <img
       alt="Bert De Block"
       class="size-56 shrink-0 rounded-xl border border-slate-200 dark:border-slate-700"
-      src="/public/bert.jpeg"
+      src="public/bert.jpeg"
     />
 
     <div>
