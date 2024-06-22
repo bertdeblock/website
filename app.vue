@@ -30,7 +30,7 @@ useSeoMeta({
   ogTitle: "Bert De Block",
   description: "Senior Front-end Developer • Ember CLI Core Team Emeritus",
   ogDescription: "Senior Front-end Developer • Ember CLI Core Team Emeritus",
-  ogImage: "public/bert.jpeg",
+  ogImage: "bert.jpeg",
 });
 
 const toggleDarkMode = () => {
