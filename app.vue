@@ -92,7 +92,7 @@ const toggleDarkMode = () => {
     </div>
   </header>
 
-  <div class="container space-y-32 py-16">
+  <div class="container space-y-16 pb-8 pt-16 md:space-y-32 md:pb-16 md:pt-32">
     <NuxtPage />
   </div>
 </template>
