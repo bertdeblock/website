@@ -25,6 +25,14 @@ useHead({
   ],
 });
 
+useSeoMeta({
+  title: "Bert De Block",
+  ogTitle: "Bert De Block",
+  description: "Senior Front-end Developer • Ember CLI Core Team Emeritus",
+  ogDescription: "Senior Front-end Developer • Ember CLI Core Team Emeritus",
+  ogImage: "/public/bert.jpeg",
+});
+
 const toggleDarkMode = () => {
   const html = document.querySelector("html");
 

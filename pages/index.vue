@@ -173,7 +173,7 @@ const yearsOfExperience = new Date().getFullYear() - 2012;
     <img
       alt="Bert De Block"
       class="size-56 shrink-0 rounded-xl border border-slate-200 dark:border-slate-700"
-      src="public/bert.jpeg"
+      src="/public/bert.jpeg"
     />
 
     <div>
@@ -184,7 +184,7 @@ const yearsOfExperience = new Date().getFullYear() - 2012;
         with {{ yearsOfExperience }}+ years of experience in building Web
         Applications. I'm also an
         <a class="highlight" href="https://emberjs.com/teams/" target="_blank">
-          Ember CLI Core Team Emeritus </a
+          Ember CLI Core Team Emeritus</a
         >. <br /><br />
         I enjoy building beautiful online experiences, always with the end user
         in mind.
