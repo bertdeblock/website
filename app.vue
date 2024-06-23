@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 useHead({
-  title: "Bert De Block",
+  htmlAttrs: { lang: 'en' },
   link: [{ rel: "icon", type: "image/png", href: "/favicon.svg" }],
   script: [
     {
@@ -23,6 +23,7 @@ useHead({
       `,
     },
   ],
+  title: "Bert De Block",
 });
 
 useSeoMeta({
@@ -30,7 +31,7 @@ useSeoMeta({
   ogTitle: "Bert De Block",
   description: "Senior Front-end Developer • Ember CLI Core Team Emeritus",
   ogDescription: "Senior Front-end Developer • Ember CLI Core Team Emeritus",
-  ogImage: "bert.jpeg",
+  ogImage: "bert.webp",
 });
 
 const toggleDarkMode = () => {
