@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 useHead({
-  htmlAttrs: { lang: 'en' },
+  htmlAttrs: { lang: "en" },
   link: [{ rel: "icon", type: "image/png", href: "/favicon.svg" }],
   script: [
     {
@@ -53,7 +53,7 @@ const toggleDarkMode = () => {
   >
     <div class="container flex items-center justify-between py-8">
       <h1 class="heading-xl">
-        <NuxtLink to="/">Bert De Block</NuxtLink>
+        <NuxtLink class="outline-focus" to="/">Bert De Block</NuxtLink>
       </h1>
 
       <ul class="flex items-center space-x-4">
@@ -81,7 +81,7 @@ const toggleDarkMode = () => {
           <button
             @click="toggleDarkMode()"
             aria-label="Toggle Dark Mode"
-            class="link block"
+            class="link outline-focus block"
             title="Toggle Dark Mode"
             type="button"
           >

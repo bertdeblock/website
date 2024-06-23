@@ -43,3 +43,9 @@ body {
     @apply dark:bg-white/20;
   }
 }
+
+@layer utilities {
+  .outline-focus:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-sky-500;
+  }
+}

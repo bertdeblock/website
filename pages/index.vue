@@ -183,7 +183,11 @@ const yearsOfExperience = new Date().getFullYear() - 2012;
         <span class="highlight">Senior Front-end Developer</span>
         with {{ yearsOfExperience }}+ years of experience in building Web
         Applications. I'm also an
-        <a class="highlight" href="https://emberjs.com/teams/" target="_blank">
+        <a
+          class="highlight outline-focus"
+          href="https://emberjs.com/teams/"
+          target="_blank"
+        >
           Ember CLI Core Team Emeritus</a
         >. <br /><br />
         I enjoy building beautiful online experiences, always with the end user
@@ -207,7 +211,7 @@ const yearsOfExperience = new Date().getFullYear() - 2012;
         <h3 class="heading-lg mb-2">
           <a
             :href="project.url"
-            class="after:absolute after:inset-0"
+            class="outline-focus after:absolute after:inset-0"
             target="_blank"
           >
             {{ project.name }}
@@ -234,7 +238,7 @@ const yearsOfExperience = new Date().getFullYear() - 2012;
       <li v-for="social in socials">
         <a
           :href="social.url"
-          class="link flex w-fit items-center space-x-2"
+          class="link outline-focus flex w-fit items-center space-x-2"
           target="_blank"
         >
           <span v-html="social.icon"></span>
