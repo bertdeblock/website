@@ -180,7 +180,7 @@ const yearsOfExperience = new Date().getFullYear() - 2012;
       <h2 class="heading-xl mb-8">Hi, I'm Bert!</h2>
       <p>
         I’m a passionate
-        <span class="highlight">Senior Front-end Developer</span>
+        <span class="highlight">Senior Front-end Engineer</span>
         with {{ yearsOfExperience }}+ years of experience in building Web
         Applications. I'm also an
         <a
