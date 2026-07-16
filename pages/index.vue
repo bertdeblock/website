@@ -117,7 +117,7 @@ const socials = [
   },
   {
     name: "Instagram",
-    url: "https://instagram.com/borrtt",
+    url: "https://instagram.com/bert.de.block",
     icon: `
       <svg
         class="size-4"
