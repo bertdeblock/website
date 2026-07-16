@@ -34,6 +34,12 @@ useSeoMeta({
   ogImage: "bert.webp",
 });
 
+const isDarkMode = ref(false);
+
+onMounted(() => {
+  isDarkMode.value = document.documentElement.classList.contains("dark");
+});
+
 const toggleDarkMode = () => {
   const html = document.querySelector("html");
 
@@ -44,10 +50,19 @@ const toggleDarkMode = () => {
     html.classList.add("dark");
     localStorage.setItem("mode", "dark");
   }
+
+  isDarkMode.value = html.classList.contains("dark");
 };
 </script>
 
 <template>
+  <a
+    class="outline-focus sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-20 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-slate-900 dark:focus:bg-slate-800 dark:focus:text-white"
+    href="#main-content"
+  >
+    Skip to content
+  </a>
+
   <header
     class="sticky left-0 top-0 z-10 w-full border-b border-slate-200 bg-white/90 backdrop-blur dark:border-slate-700 dark:bg-slate-800/90"
   >
@@ -80,14 +95,17 @@ const toggleDarkMode = () => {
         <li>
           <button
             @click="toggleDarkMode()"
+            :aria-pressed="isDarkMode"
             aria-label="Toggle Dark Mode"
             class="link outline-focus block"
             title="Toggle Dark Mode"
             type="button"
           >
             <svg
+              aria-hidden="true"
               class="size-4"
               fill="currentColor"
+              focusable="false"
               viewBox="0 0 512 512"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -101,7 +119,10 @@ const toggleDarkMode = () => {
     </div>
   </header>
 
-  <div class="container space-y-16 pb-8 pt-16 md:space-y-32 md:pb-16 md:pt-32">
+  <main
+    class="container space-y-16 pb-8 pt-16 md:space-y-32 md:pb-16 md:pt-32"
+    id="main-content"
+  >
     <NuxtPage />
-  </div>
+  </main>
 </template>

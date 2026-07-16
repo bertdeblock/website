@@ -88,8 +88,10 @@ const socials = [
     url: "https://facebook.com/borrtt",
     icon: `
       <svg
+        aria-hidden="true"
         class="size-4"
         fill="currentColor"
+        focusable="false"
         viewBox="0 0 512 512"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -104,8 +106,10 @@ const socials = [
     url: "https://github.com/bertdeblock",
     icon: `
       <svg
+        aria-hidden="true"
         class="size-4"
         fill="currentColor"
+        focusable="false"
         viewBox="0 0 496 512"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -120,8 +124,10 @@ const socials = [
     url: "https://instagram.com/bert.de.block",
     icon: `
       <svg
+        aria-hidden="true"
         class="size-4"
         fill="currentColor"
+        focusable="false"
         viewBox="0 0 448 512"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -136,8 +142,10 @@ const socials = [
     url: "https://linkedin.com/in/bert-de-block",
     icon: `
       <svg
+        aria-hidden="true"
         class="size-4"
         fill="currentColor"
+        focusable="false"
         viewBox="0 0 448 512"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -152,8 +160,10 @@ const socials = [
     url: "https://strava.com/athletes/11926148",
     icon: `
       <svg
+        aria-hidden="true"
         class="size-4"
         fill="currentColor"
+        focusable="false"
         viewBox="0 0 384 512"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -173,7 +183,7 @@ const yearsOfExperience = new Date().getFullYear() - 2012;
     <img
       alt="Bert De Block"
       class="size-56 shrink-0 rounded-xl border border-slate-200 dark:border-slate-700"
-      src="public/bert.webp"
+      src="/bert.webp"
     />
 
     <div>
@@ -186,9 +196,11 @@ const yearsOfExperience = new Date().getFullYear() - 2012;
         <a
           class="highlight outline-focus"
           href="https://emberjs.com/teams/"
+          rel="noopener noreferrer"
           target="_blank"
         >
-          Ember CLI Core Team Emeritus</a
+          Ember CLI Core Team Emeritus
+          <span class="sr-only">(opens in new tab)</span></a
         >. <br /><br />
         I enjoy building beautiful online experiences, always with the end user
         in mind.
@@ -206,15 +218,17 @@ const yearsOfExperience = new Date().getFullYear() - 2012;
       <div
         v-for="project in projects"
         :class="randomBackground()"
-        class="relative flex min-h-56 flex-col rounded-xl bg-gradient-to-r p-8 transition-transform duration-[400ms] hover:-translate-y-2"
+        class="relative flex min-h-56 flex-col rounded-xl bg-gradient-to-r p-8 transition-transform duration-[400ms] motion-safe:hover:-translate-y-2"
       >
         <h3 class="heading-lg mb-2">
           <a
             :href="project.url"
             class="outline-focus after:absolute after:inset-0"
+            rel="noopener noreferrer"
             target="_blank"
           >
             {{ project.name }}
+            <span class="sr-only">(opens in new tab)</span>
           </a>
         </h3>
 
@@ -239,11 +253,13 @@ const yearsOfExperience = new Date().getFullYear() - 2012;
         <a
           :href="social.url"
           class="link outline-focus flex w-fit items-center space-x-2"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <span v-html="social.icon"></span>
           <span>
             {{ social.name }}
+            <span class="sr-only">(opens in new tab)</span>
           </span>
         </a>
       </li>
