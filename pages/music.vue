@@ -7,24 +7,29 @@ type Tags = string[];
 type Entry = {
   src: string;
   tags: Tags;
+  title: string;
 };
 
 const entries: Entry[] = [
   {
     src: "https://open.spotify.com/embed/track/7A9hbRAiHFC74aZLjZYIio",
     tags: ["Track"],
+    title: "Spotify: Youth",
   },
   {
     src: "https://open.spotify.com/embed/album/4wXzmsXCXVn3REyPK2Z4M3",
     tags: ["Album"],
+    title: "Spotify: Dive Deep (Hushed)",
   },
   {
     src: "https://open.spotify.com/embed/album/4wXzmsXCXVn3REyPK2Z4M3",
     tags: ["Album"],
+    title: "Spotify: Dive Deep (Hushed)",
   },
   {
     src: "https://open.spotify.com/embed/track/7A9hbRAiHFC74aZLjZYIio",
     tags: ["Track"],
+    title: "Spotify: Youth",
   },
 ];
 
@@ -56,12 +61,14 @@ function toggleTag(tag: string): void {
       <li v-for="tag in tags">
         <button
           @click="toggleTag(tag)"
+          :aria-pressed="isTagActive(tag)"
           :class="
             isTagActive(tag)
-              ? 'bg-slate-900/20 dark:bg-white/40'
+              ? 'bg-slate-900/20 ring-1 ring-slate-900/40 dark:bg-white/40 dark:ring-white/60'
               : 'bg-slate-900/10 dark:bg-white/20'
           "
-          class="tag"
+          class="tag outline-focus"
+          type="button"
         >
           {{ tag }}
         </button>
@@ -72,7 +79,14 @@ function toggleTag(tag: string): void {
       <iframe
         v-for="entry in entriesForActiveTags"
         :src="entry.src"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture;"
+        :title="entry.title"
+        allow="
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          fullscreen;
+          picture-in-picture;
+        "
         allowfullscreen
         class="rounded-3xl"
         frameBorder="0"
